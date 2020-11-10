@@ -300,6 +300,34 @@ The Karatsuba algorithm is a fast multiplication algorithm. It reduces the multi
    karatsuba(15, 15) #returns 225
 ```
 
+### AVL tree
+
+An AVL tree is a height-balanced binary search tree: for each of its vertices, the height of its two subtrees differs by no more than 1.
+
+We will represent the nodes of the AVL tree as `class Node`. 
+#### Basic class methods:
+
+Initialization `def initialize(node_list = nil)`
+
+Balancing nodes `def balance(node)`
+
+Inserting a value `def insert_value(value)`
+
+Finding by value `def find(value)`
+
+Deleting `def delete(value)`
+
+#### Example:
+
+```ruby
+     @my_tree = AvlTree.new([2, 3])
+     @my_tree.insert_value(5)
+     @my_tree.insert_value(-2)
+     @my_tree.delete(5)
+     node2 = @my_tree.find(2)   # node2.data == 2
+    }
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
